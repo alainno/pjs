@@ -6,7 +6,7 @@ $pagina = $_GET['p'];
 $pagina = empty($pagina) ? 'home' : addslashes($pagina);
 
 // procesando
-$comandos = array(
+/*$comandos = array(
 	'stylus -c "'.$directory.'\css\style.styl"'
 	,'jade -P "'.$directory.'\vista\/'.$pagina.'.jade"'
 );
@@ -16,7 +16,7 @@ foreach($comandos as $comando){
 	if($return_var){
 		die('Error compilando: '.$comando);
 	}
-}
+}*/
 
 // mostrando resultados
 include "vista/$pagina.html";
