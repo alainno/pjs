@@ -74,15 +74,15 @@ a
 	text-align right
 .tac
 	text-align center
-alignleft
+.alignleft
 	display inline
 	margin 0 10px 3px 0
 	float left
-alignright
+.alignright
 	display inline
 	margin 0 0 3px 10px
 	float right
-aligncenter
+.aligncenter
 	display block
 	margin-left auto
 	margin-right auto
@@ -92,6 +92,8 @@ aligncenter
 	white-space nowrap
 .oculto
 	display none
+.invisible
+	visibility hidden
 .mitad
 	width 47%
 .ttu
@@ -143,35 +145,5 @@ button::-moz-focus-inner,input::-moz-focus-inner
 	padding 0
 :focus
 	outline none
-.boton
-	border-radius(4px)
-	border 1px solid #ccc
-	border none
-	box-shadow(1px 1px 2px #535353)
-	display inline-block
-	line-height 20px
-	padding 4px 12px
-	background-linear-gradient(top, #19a6df, 0%, #0a4aac, 100%)
-	font-weight bold
-	color #fff
-	cursor pointer
-	vertical-align middle
-	text-shadow 1px 1px 1px #444
-	&:hover
-		text-decoration none
-	&:active
-		position relative
-		top 1px
-	&.disabled
-		background #19a6df
-		box-shadow(none)
-		cursor default
-		text-shadow none
-		&:active
-			top 0
-.boton-grande
-	border-radius(6px)
-	padding 9px 26px
-	font-size 18px
-.boton-naranja
-	background-linear-gradient(top, #f0b13f, 0%, #ce411b, 100%)
+.nonborderbox *
+	vendor('box-sizing',content-box)
