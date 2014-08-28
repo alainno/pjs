@@ -40,7 +40,7 @@ a:hover{outline:none;text-decoration:underline}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 :focus{outline:none}
 .nonborderbox *{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;-ms-box-sizing:content-box;-o-box-sizing:content-box;box-sizing:content-box}
-body{background:#ccc;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;padding:15px 0}
+body{background:#ddd;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;padding:15px 0}
 a{color:#00b7ff}
 .envoltura{margin:0 auto;width:960px;background:#fff;border:1px solid #c4c4c4;-webkit-box-shadow:0 0 2px 1px #bbb;-moz-box-shadow:0 0 2px 1px #bbb;-ms-box-shadow:0 0 2px 1px #bbb;-o-box-shadow:0 0 2px 1px #bbb;box-shadow:0 0 2px 1px #bbb}
 .header .arriba{height:80px;display:table;}
