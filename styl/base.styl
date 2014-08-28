@@ -1,0 +1,149 @@
+vendor(prop, args)
+	-webkit-{prop} args
+	   -moz-{prop} args
+	    -ms-{prop} args
+	     -o-{prop} args
+	        {prop} args
+
+border-radius()
+	vendor('border-radius', arguments)
+
+box-shadow()
+	vendor('box-shadow', arguments)
+
+transition()
+	vendor('transition', arguments)
+
+transform()
+	vendor('transform', arguments)
+
+transform-origin()
+	vendor('transform-origin', arguments)
+
+user-select()
+	vendor('user-select', arguments)
+
+background-linear-gradient(startPoint, startColor, startInterval, endColor, endInterval, deprecatedWebkitStartPoint = false, deprecatedWebkitEndPoint = false)
+	background-color startColor
+	if deprecatedWebkitStartPoint && deprecatedWebkitEndPoint
+		background-image -webkit-gradient(linear, deprecatedWebkitStartPoint, deprecatedWebkitEndPoint, color-stop(startInterval, startColor), color-stop(endInterval, endColor))
+	background-image -webkit-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -moz-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+a
+	text-decoration none
+	&:active
+		outline none
+	&:hover
+		outline none
+		text-decoration underline
+.left
+	float left
+.right
+	float right
+.clearer
+	overflow hidden
+	width 100%
+.clearfix
+	zoom 1
+	&:after
+		clear both
+		content "\0020"
+		display block
+		height 0
+		visibility hidden
+.mt5
+	margin-top 5px !important
+.mt10
+	margin-top 10px !important
+.mt15
+	margin-top 15px !important
+.mt20
+	margin-top 20px !important
+.ml5
+	margin-left 5px !important
+.ml10
+	margin-left 10px !important
+.ml15
+	margin-left 15px !important
+.ml20
+	margin-left 20px !important
+.tar
+	text-align right
+.tac
+	text-align center
+.alignleft
+	display inline
+	margin 0 10px 3px 0
+	float left
+.alignright
+	display inline
+	margin 0 0 3px 10px
+	float right
+.aligncenter
+	display block
+	margin-left auto
+	margin-right auto
+.img-rpl
+	overflow hidden
+	text-indent 100%
+	white-space nowrap
+.oculto
+	display none
+.invisible
+	visibility hidden
+.mitad
+	width 47%
+.ttu
+	text-transform uppercase
+.sombra
+	box-shadow(0px 0px 3px #7a7a7a)
+.curva
+	border-radius(4px)
+.curva-si
+	vendor('border-top-left-radius',4px)
+.curva-sd
+	vendor('border-top-right-radius',4px)
+.curva-ii
+	vendor('border-bottom-left-radius',4px)
+.curva-id
+	vendor('border-bottom-right-radius',4px)
+.curva-sup
+	vendor('border-top-right-radius',4px)
+	vendor('border-top-left-radius',4px)
+.curva-inf
+	vendor('border-bottom-left-radius',4px)
+	vendor('border-bottom-right-radius',4px)
+.curva-izq
+	vendor('border-top-left-radius',4px)
+	vendor('border-bottom-left-radius',4px)
+.curva-der
+	vendor('border-top-right-radius',4px)
+	vendor('border-bottom-right-radius',4px)
+.lh
+	margin 0
+	padding 0
+	li
+		display inline-block
+		list-style none
+		*display inline
+		zoom 1
+/* iconos */
+[class^="icono-"],[class*="icono-"]
+	display inline-block
+	width 16px
+	height 16px
+	background url(../img/sprite-iconos.png) no-repeat
+	line-height 16px
+	vertical-align text-top
+	margin-top -1px
+/* botones */
+button::-moz-focus-inner,input::-moz-focus-inner
+	border 0
+	padding 0
+:focus
+	outline none
+.nonborderbox *
+	vendor('box-sizing',content-box)
